@@ -1,4 +1,4 @@
-package com.example.projeto1.aula1;
+package aula1;
 
 public class Carro {
 
