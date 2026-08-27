@@ -3,6 +3,10 @@ package aula5.associacao;
 public class Pessoa {
 	
 	private String nome;
+	
+	public Pessoa(String nome) {
+		setNome(nome);
+	}
 
 	public String getNome() {
 		return nome;
