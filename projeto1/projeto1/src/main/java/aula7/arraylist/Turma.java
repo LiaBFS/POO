@@ -6,6 +6,11 @@ import java.util.ArrayList;
 
 	Vetor dinamicamente alocado = o array cresce conforme são acrescentado dados
 
+	Métodos da classe Array:
+	- add()  Guarda um objeto
+	- remove()  Remove o objeto
+	- size() Retorna a quantidade de objetos armazenados
+	- get(int) Obtém um objeto na posição indicada
 **/
 
 public class Turma {
