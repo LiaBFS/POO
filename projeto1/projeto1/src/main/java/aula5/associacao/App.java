@@ -13,8 +13,8 @@ public class App {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		
+		Pessoa p = new Pessoa("Lia");
+		Veiculo v = new Veiculo("Uno", "Fiat", p);
 
 	}
 
