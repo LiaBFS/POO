@@ -13,7 +13,12 @@ public class App {
 		 
 		 **/
 		
+		Pessoa p = new Pessoa(45);
 		
+		Animal a =p;
+		Onivoro o =p;
+		Carnivoro c =p;
+		Herbivoro h =p;
 
 	}
 

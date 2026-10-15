@@ -3,12 +3,13 @@ package aula9.lista6;
 public class ContaBancaria {
 	 
 	private String numero;
-	private String titular;
+	private Cliente titular;
 	private double saldo;
  
-	public ContaBancaria(String numero, String titular) {
+	public ContaBancaria(String numero, Cliente titular) {
 		setNumero(numero);
 		setTitular(titular);
+		saldo = 0;
 	}
 	
 	public String getNumero() {
@@ -21,17 +22,21 @@ public class ContaBancaria {
 		}
 		this.numero = numero;
 	}
-	public String getTitular() {
+	
+	public Cliente getTitular() {
 		return titular;
 	}
-	public void setTitular(String titular) {
-		if (titular == null || titular.trim().isEmpty()) {
-			throw new IllegalArgumentException("Titular invalido");
-		}
+ 
+	public void setTitular(Cliente titular) {
 		this.titular = titular;
 	}
+ 
 	public double getSaldo() {
 		return saldo;
+	}
+	
+	protected void setSaldo(double saldo) {
+		this.saldo = saldo;
 	}
  
  
