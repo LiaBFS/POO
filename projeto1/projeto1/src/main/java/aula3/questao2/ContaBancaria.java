@@ -15,21 +15,25 @@ public class ContaBancaria {
 	public void depositar(double quantia) {
 		
 		if(quantia <=0) {
-			System.out.println("Quantia inválida");
-		} else {
-			saldo +=quantia;
+			throw new IllegalArgumentException("Quantia inválida");
 		}
-		
+		saldo += quantia;
+		System.out.println("Saldo atual: "+saldo);
 	}
 	
 	public void sacar(double quantia) {
-		if(saldo < quantia) {
-			System.out.println("Saldo insuficiente");
-		} else {
-			saldo -= quantia;
+		if(saldo < quantia || quantia <= 0) {
+			throw new IllegalArgumentException("Saldo insuficiente");
 		}
+		saldo -= quantia;
 		System.out.println("Saldo atual: "+saldo);
 		
+	}
+	
+	public void transferir(ContaBancaria destino, double valor) {
+		
+		this.sacar(valor);
+		destino.depositar(valor);
 	}
 	
 	public String getNumero() {
@@ -53,6 +57,4 @@ public class ContaBancaria {
 	public double getSaldo() {
 		return saldo;
 	}
-	
-
 }

@@ -51,7 +51,7 @@ public class App {
 		c.sacar(200);
 		System.out.println("Saldo atual: "+c.getSaldo());
 		
-		c.sacar(1000);
+		c.sacar(400);
 		System.out.println("Saldo atual: "+c.getSaldo());
 	}
 

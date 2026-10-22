@@ -14,6 +14,10 @@ public class ContaBancaria {
 	}
 	
 	public void depositar(double valor) {
+		if(valor <= 0) {
+			throw new IllegalArgumentException("Valor inválido");
+		}
+		
 		saldo += valor;
 	}
 	
